@@ -2,7 +2,6 @@ import numpy as np
 import casadi as ca
 from acados_template import AcadosModel
 from acados_template import AcadosOcp, AcadosOcpSolver
-import scipy
 
 
 class SolverAcados:
@@ -20,9 +19,9 @@ class SolverAcados:
         dt: float,
         N: int,
     ):
-        num_obs = 1  # Number of Obstacles
-        obs_param = ca.SX.sym("obs", num_obs, 1)
-        con_expr = ca.SX.sym("con_expr", num_obs, 1)
+        # num_obs = 1  # Number of Obstacles
+        # obs_param = ca.SX.sym("obs", num_obs, 1)
+        # con_expr = ca.SX.sym("con_expr", num_obs, 1)
         self.nx = x.shape[0]
         self.nu = u.shape[0]
 
